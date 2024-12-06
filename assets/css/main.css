@@ -1,0 +1,135 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400&display=swap");
+
+/* Reset default styles for all elements */
+* {
+  list-style: none; /* Removes default list styles */
+  margin: 0; /* Resets margin for all elements */
+}
+
+/* Add basic styles for body, headings, and links */
+body {
+  font-family: Arial, sans-serif; /* Sets a default font */
+  line-height: 1.6; /* Improves readability */
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Roboto Slab", serif; /* Sets the font to Roboto Slab for headings */
+}
+
+p {
+  font-family: "Helvetica, Arial"; /* Sets the font to Helvetica, Arial for paragraphs */
+}
+
+a {
+  text-decoration: none; /* Removes underline from links */
+}
+
+a:hover {
+  text-decoration: underline; /* Underline on hover for better UX */
+}
+
+/* Styles for the specials section */
+.specials {
+  /* position: relative; */ /* Uncomment if positioning is needed */
+  display: flex; /* Enables flexbox layout */
+  flex-flow: wrap row; /* Allows wrapping of items in a row */
+  justify-content: center; /* Centers items horizontally */
+  align-items: center; /* Centers items vertically */
+  align-content: center; /* Centers content in the flex container */
+  column-gap: 95px; /* Space between columns */
+  background-color: #314b57; /* Background color for the specials section */
+
+  .second-section img{
+    width: 565px;
+    height: 260px;
+    line-height: 0;
+  }
+}
+
+.specials .first-section {
+  color: #fff; /* Text color for the first section */
+}
+
+.specials .first-section ul {
+  display: flex; /* Enables flexbox for the list */
+  column-gap: 20px; /* Space between list items */
+  padding: 0;
+}
+
+.specials .first-section ul img {
+  width: 100%; /* Makes images responsive */
+  text-align: center; /* Centers images */
+}
+
+.specials .first-section ul h3 {
+  text-align: center; /* Centers heading text */
+}
+
+/* Styles for the services section */
+.services {
+  width: 74%;
+  margin: 50px auto 0;
+
+  h2 {
+    color: #ab3c3c;
+    font-size: 44px;
+    text-transform: uppercase;
+    font-weight: 900;
+  }
+
+  .more-info {
+    display: grid;
+    column-gap: 85px;
+    grid-template-areas:
+      "image paragraph  "
+      "image paragraph-links";
+
+    .image {
+      grid-area: image;
+    }
+    .paragraph {
+      font-size: 16px;
+      grid-area: paragraph;
+    }
+    .paragraph-links {
+      grid-area: paragraph-links;
+    }
+    h4 {
+      padding-top: 15px;
+      a {
+        color: #ab3c3c;
+      }
+    }
+  }
+}
+
+/* Styles for the services section */
+.blog {
+  width: 74%;
+  margin: 50px auto 0;
+
+  h2 {
+    color: #ab3c3c;
+    font-size: 40px;
+    text-transform: capitalize;
+    font-weight: 900;
+  }
+
+  ul{
+    display: flex;
+    padding: 0;
+    gap: 40px;
+
+    li img{
+        width: 460px;
+    }
+    li p{
+        width: 450px;
+    }
+  }
+}
