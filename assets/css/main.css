@@ -2,14 +2,14 @@
 
 /* Reset default styles for all elements */
 * {
-  list-style: none; /* Removes default list styles */
-  margin: 0; /* Resets margin for all elements */
+  list-style: none;
+  margin: 0;
 }
 
 /* Add basic styles for body, headings, and links */
 body {
-  font-family: Arial, sans-serif; /* Sets a default font */
-  line-height: 1.6; /* Improves readability */
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
 }
 
 h1,
@@ -18,118 +18,208 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Roboto Slab", serif; /* Sets the font to Roboto Slab for headings */
+  font-family: "Roboto Slab", serif;
+  font-weight: 600;
+  color: #ebebeb;
 }
 
 p {
-  font-family: "Helvetica, Arial"; /* Sets the font to Helvetica, Arial for paragraphs */
+  font-family: "Helvetica, Arial";
 }
 
 a {
-  text-decoration: none; /* Removes underline from links */
+  text-decoration: none;
 }
 
 a:hover {
-  text-decoration: underline; /* Underline on hover for better UX */
+  text-decoration: underline;
 }
 
 /* Styles for the specials section */
 .specials {
-  /* position: relative; */ /* Uncomment if positioning is needed */
-  display: flex; /* Enables flexbox layout */
-  flex-flow: wrap row; /* Allows wrapping of items in a row */
-  justify-content: center; /* Centers items horizontally */
-  align-items: center; /* Centers items vertically */
-  align-content: center; /* Centers content in the flex container */
-  column-gap: 95px; /* Space between columns */
-  background-color: #314b57; /* Background color for the specials section */
-
-  .second-section img{
-    width: 565px;
-    height: 260px;
-    line-height: 0;
-  }
+  width: 100%;
+  background-color: #314b57;
 }
-
+.specials .specials-main-div {
+  width: 91%;
+  display: flex;
+  flex-flow: wrap row;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  margin: 0 auto;
+  column-gap: 2%;
+  flex-wrap: wrap;
+}
 .specials .first-section {
-  color: #fff; /* Text color for the first section */
+  width: 62%;
+  color: #fff;
+  line-height: 30px;
 }
 
 .specials .first-section ul {
-  display: flex; /* Enables flexbox for the list */
-  column-gap: 20px; /* Space between list items */
-  padding: 0;
+  display: flex;
+  column-gap: 10px;
+  padding: 3px 0 0 0;
 }
 
 .specials .first-section ul img {
-  width: 100%; /* Makes images responsive */
-  text-align: center; /* Centers images */
+  width: 100%;
+  text-align: center;
 }
 
 .specials .first-section ul h3 {
-  text-align: center; /* Centers heading text */
+  text-align: center;
+}
+
+.specials .second-section {
+  width: 36%;
+  line-height: 0;
+}
+
+.specials .second-section img {
+  width: 100%;
+  height: auto;
+  line-height: 0;
 }
 
 /* Styles for the services section */
 .services {
-  width: 74%;
+  width: 85%;
+  margin: 10px auto 0;
+}
+
+.services h2 {
+  color: #ab3c3c;
+  font-size: 47px;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+
+.services .more-info {
+  display: grid;
+  column-gap: 40px;
+  grid-template-areas: "image paragraph" "image paragraph-links";
+}
+
+.services .more-info .image {
+  grid-area: image;
+}
+
+.services .more-info .paragraph {
+  font-size: 20px;
+  line-height: 1.4em;
+  color: #000000ba;
+  grid-area: paragraph;
+  font-family: Helvetica, Arial;
+}
+
+.services .more-info .paragraph-links {
+  grid-area: paragraph-links;
+}
+
+.services .more-info h4 {
+  padding-top: 15px;
+  font-weight: 500;
+}
+
+.services .more-info a {
+  color: #ab3c3c;
+}
+
+/* Styles for the blog section */
+.blog {
+  width: 85%;
   margin: 50px auto 0;
+}
 
-  h2 {
-    color: #ab3c3c;
-    font-size: 44px;
-    text-transform: uppercase;
-    font-weight: 900;
+.blog h2 {
+  color: #ab3c3c;
+  font-size: 30px;
+  text-transform: capitalize;
+  font-weight: 900;
+}
+
+.blog ul {
+  display: flex;
+  padding: 0;
+  gap: 40px;
+}
+
+.blog ul li {
+  width: 67%;
+}
+
+.blog ul li img {
+  width: 100%;
+}
+
+.blog ul li p {
+  width: 100%;
+}
+
+/* Media Queries */
+@media only screen and (min-width: 1314px) {
+  .specials .second-section {
   }
-
-  .more-info {
-    display: grid;
-    column-gap: 85px;
-    grid-template-areas:
-      "image paragraph  "
-      "image paragraph-links";
-
-    .image {
-      grid-area: image;
-    }
-    .paragraph {
-      font-size: 16px;
-      grid-area: paragraph;
-    }
-    .paragraph-links {
-      grid-area: paragraph-links;
-    }
-    h4 {
-      padding-top: 15px;
-      a {
-        color: #ab3c3c;
-      }
-    }
+}
+@media only screen and (max-width: 915px) {
+  .specials .specials-main-div {
+    width: 96% !important;
+  }
+  .specials .first-section {
+    width: 59% !important;
+  }
+  .services {
+    width: 96%;
+  }
+  .services .more-info .paragraph {
+    font-size: 15px !important;
+  }
+  .services .more-info h4 {
+    padding-top: 0 !important;
+  }
+  .services .more-info .paragraph-links {
+    padding-top: 15px;
+  }
+  .blog {
+    width: 96% !important;
   }
 }
 
-/* Styles for the services section */
-.blog {
-  width: 74%;
-  margin: 50px auto 0;
-
-  h2 {
-    color: #ab3c3c;
-    font-size: 40px;
-    text-transform: capitalize;
-    font-weight: 900;
+@media only screen and (max-width: 630px) {
+  .specials .specials-main-div {
+    width: 100% !important;
+    flex-flow: wrap column !important;
+  }
+  .specials .first-section {
+    width: 95% !important;
+  }
+  .specials .second-section {
+    width: 100% !important;
+  }
+  .specials .second-section img {
+    width: 100%;
+    height: 256px;
   }
 
-  ul{
-    display: flex;
-    padding: 0;
-    gap: 40px;
-
-    li img{
-        width: 460px;
-    }
-    li p{
-        width: 450px;
-    }
+  .services .more-info{
+    grid-template-areas:
+        "image image"
+        "paragraph paragraph"
+        "paragraph-links paragraph-links" !important;
+  }
+  .services .more-info .image{
+    width: 100%;
+    margin-bottom: 11px;
+  }
+  .blog{
+    width: 96% !important;
+  }
+  .blog ul{
+    display: block;
+  }
+  .blog ul li{
+    width: 100% !important;
   }
 }
